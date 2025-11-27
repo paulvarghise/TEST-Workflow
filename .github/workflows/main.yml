@@ -12,7 +12,7 @@ jobs:
       - name: hello world
         run : echo "Hello world"
       - name : Even Name
-        run : echo "Event Name:${{github.event}}"# context reference
+        run : echo "Event Name:${{github.event_name}}"# context reference
         
   # second job
   echo-goodbye:
@@ -27,4 +27,14 @@ jobs:
             echo "This is"
             echo "Paul here"
             echo "script"
+
+  #third job
+  window-echo:
+    if: github.event_name == 'Workflow_dispatch'.
+    runs-on: windows-lastest
+    steps:
+      - name : show OS
+        shell : bash
+        run : echo "The job is running on window runner"
+      
       
