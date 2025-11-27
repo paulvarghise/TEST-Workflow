@@ -30,7 +30,7 @@ jobs:
 
   #third job
   window-echo:
-    if: github.event_name == 'Workflow_dispatch'.
+    if: github.event_name == 'Workflow_dispatch'
     runs-on: windows-lastest
     steps:
       - name : show OS
