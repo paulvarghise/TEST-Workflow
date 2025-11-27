@@ -35,6 +35,6 @@ jobs:
     steps:
       - name : show OS
         shell : bash
-        run : echo "The job is running on window runner"
+        run : echo "The job is running"
       
       
